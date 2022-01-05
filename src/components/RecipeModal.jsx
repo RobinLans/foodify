@@ -53,7 +53,6 @@ function RecipeModal({ setRecipeInfo }) {
       }
 
       const filteredInstructions = instructionsArr.filter((elem) => {
-        console.log(elem !== "" && !elem.includes("STEP"));
         return elem !== "" && !elem.includes("STEP");
       });
 
@@ -74,19 +73,14 @@ function RecipeModal({ setRecipeInfo }) {
     }
   }
 
-  console.log(recipeToDisplay.strYouTube);
-
   return (
     <>
-      <div className="bg-white opacity-100 w-[585px] h-[630px] z-10 rounded-md relative overflow-hidden flex flex-col">
-        <div className="h-96 w-full overflow-hidden border-b-4 border-detail relative">
-          <h1
-            className="absolute top-1 text-5xl text-primary hover:text-background z-10 right-2 font-bold cursor-pointer"
-            onClick={handleExit}
-          >
+      <div className="modal">
+        <div className="modalImgCon">
+          <h1 className="favBtn" onClick={handleExit}>
             X
           </h1>
-          <button className="absolute top-2 left-2 bg-background h-12 w-12 rounded-full flex justify-center items-center z-10">
+          <button className="exitBtn">
             <BsFillSuitHeartFill className="text-3xl text-white" />
           </button>
           <img
@@ -95,8 +89,8 @@ function RecipeModal({ setRecipeInfo }) {
             className="absolute w-full -top-20"
           />
         </div>
-        <div className="h-full w-full relative overflow-y-auto flex">
-          <div className="h-full w-2/6 overflow-y-auto flex flex-col items-center pb-6 bg-gray-50">
+        <div className="infoCon">
+          <div className="infoSubCon ingCon">
             <h1 className="text-xl font-bold my-2">Ingredients</h1>
             {ingAndMeas &&
               ingAndMeas.map((elem, i) => {
@@ -108,7 +102,7 @@ function RecipeModal({ setRecipeInfo }) {
                 );
               })}
           </div>
-          <div className="h-full w-4/6 overflow-y-auto flex flex-col items-center pb-6">
+          <div className="infoSubCon w-4/6">
             <h1 className="text-xl font-bold my-2 w-80 text-center">
               {recipeToDisplay.strMeal}
             </h1>

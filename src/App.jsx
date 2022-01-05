@@ -7,8 +7,6 @@ import { recipeInfoCtx } from "./Context";
 function App() {
   const [recipeInfo, setRecipeInfo] = useState(null);
 
-  console.log("recipeInfo", recipeInfo);
-
   return (
     <recipeInfoCtx.Provider value={{ recipeInfo, setRecipeInfo }}>
       <div className="bg-background min-w-screen h-screen font-nunito flex flex-col items-center overflow-y-scroll">

@@ -5,7 +5,6 @@ function RecipeCard({ recipe }) {
   const { setRecipeInfo } = useContext(recipeInfoCtx);
 
   function handleClick(id) {
-    console.log(id);
     setRecipeInfo({
       mealId: id,
     });
@@ -25,7 +24,7 @@ function RecipeCard({ recipe }) {
           className="w-full -top-5 absolute "
         />
       </div>
-      <div className="w-full h-28 border-t-4 border-detail flex justify-center items-center  px-4">
+      <div className="textArea">
         <h1 className=" text-2xl text-center font-bold">{recipe.strMeal}</h1>
       </div>
     </div>

@@ -43,14 +43,12 @@ function SearchPage() {
     }
   }
 
-  console.log(searchQuery);
-
   return (
-    <div className="w-screen xl:w-[80rem] flex flex-col items-center">
+    <div className="searchPage">
       <div className="relative">
         <input
           type="text"
-          className="m-2 w-[350px] h-10 rounded-md pl-2 pr-12 text-primary"
+          className="searchInput"
           placeholder="Search for a recipe"
           value={searchQuery}
           onChange={handleInputChange}
@@ -59,7 +57,7 @@ function SearchPage() {
           }}
         />
         <button
-          className="absolute hover:bg-opacity-5 hover:bg-black w-8 h-8 rounded-full flex justify-center items-center top-3 right-4"
+          className="searchBtn"
           onClick={() => {
             handleSearch(searchQuery);
           }}

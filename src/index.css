@@ -16,8 +16,60 @@
   @apply text-primary text-2xl font-bold;
 }
 
+/* SearchPage */
+.searchPage {
+  @apply w-screen xl:w-[80rem] flex flex-col items-center;
+}
+
+.searchBtn {
+  @apply absolute hover:bg-opacity-5 hover:bg-black w-8 h-8 rounded-full flex justify-center items-center top-3 right-4;
+}
+
+.searchInput {
+  @apply m-2 w-[350px] h-10 rounded-md pl-2 pr-12 text-primary;
+}
+
+/*RecipeContainer*/
+.recipeContainer {
+  @apply w-full grid grid-cols-1 gap-y-8 my-4 md:grid-cols-2  lg:grid-cols-3;
+}
+
+/* RecipeCard */
 .recipeCard {
   @apply w-[350px] h-[400px] bg-white rounded-md m-auto shadow-md hover:shadow-2xl overflow-hidden cursor-pointer;
+}
+
+.textArea {
+  @apply w-full h-28 border-t-4 border-detail flex justify-center items-center px-4;
+}
+
+/*Modal*/
+.modal {
+  @apply bg-white opacity-100 w-[585px] h-[630px] z-10 rounded-md relative overflow-hidden flex flex-col;
+}
+
+.modalImgCon {
+  @apply h-96 w-full overflow-hidden border-b-4 border-detail relative;
+}
+
+.favBtn {
+  @apply absolute top-1 text-5xl text-primary hover:text-background z-10 right-2 font-bold cursor-pointer;
+}
+
+.exitBtn {
+  @apply absolute top-2 left-2 bg-background h-12 w-12 rounded-full flex justify-center items-center z-10;
+}
+
+.infoCon {
+  @apply h-full w-full relative overflow-y-auto flex;
+}
+
+.infoSubCon {
+  @apply h-full overflow-y-auto flex flex-col items-center pb-6;
+}
+
+.ingCon {
+  @apply w-2/6 bg-gray-50;
 }
 
 /* SCROLLBAR */
