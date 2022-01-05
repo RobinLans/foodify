@@ -1,10 +1,12 @@
-## Purpose
+## Recipe App
 
-This project was completed as part of a group learning exercise. This project uses the query builder, authentication, storage and realtime updates provided by [supabase](https://supabase.io).
+The purpose of this project was to create a recipe app where you can search through different recipes and get instructions for said recipe. I am fetching the recipe data from [theMealDB](https://www.themealdb.com/) which is a free (only for developing) API.
+
+The plan is to add a backend to this where you can login and save your favorite recipes to a Postgress database that will be hosted on Heroku
+
+This project is based off [app-ideas](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Recipe-App.md), which is a brilliant GitHub Repository if you need ideas for your next project
 
 ## Demo
-
-![demo](https://user-images.githubusercontent.com/14803/145367610-1f3460a2-1a94-40f2-b689-29b4fed7eb98.png)
 
 [Netlify Link](https://optimistic-liskov-4bb376.netlify.app/)
 
