@@ -16,7 +16,7 @@ function Navbar() {
         <FaUtensils className="text-primary h-12 w-12 transform rotate-45 " />
         <h1 className="text-primary text-5xl font-bold ml-4">Foodify</h1>
       </div>
-      <div>
+      {/* <div>
         <Link to="/" className="links mr-2">
           Search
         </Link>
@@ -28,7 +28,7 @@ function Navbar() {
         <button>
           <BiUserCircle className="text-primary h-14 w-14" />
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }
