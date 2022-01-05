@@ -8,6 +8,8 @@ This project is based off [app-ideas](https://github.com/florinpop17/app-ideas/b
 
 ## Demo
 
+![Skärmavbild 2022-01-05 kl  20 40 37](https://user-images.githubusercontent.com/78489322/148280399-363d9459-ab50-4ef5-898e-428d6852ac44.png)
+
 [Netlify Link](https://optimistic-liskov-4bb376.netlify.app/)
 
 ## Dependencies
