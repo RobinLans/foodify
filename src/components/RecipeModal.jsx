@@ -80,9 +80,6 @@ function RecipeModal({ setRecipeInfo }) {
           <h1 className="favBtn" onClick={handleExit}>
             X
           </h1>
-          <button className="exitBtn">
-            <BsFillSuitHeartFill className="text-3xl text-white" />
-          </button>
           <img
             src={recipeToDisplay.strMealThumb}
             alt="recipe"
