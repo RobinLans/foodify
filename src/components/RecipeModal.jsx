@@ -30,8 +30,6 @@ function RecipeModal({ setRecipeInfo }) {
     if (recipeToDisplay.idMeal) {
       const entries = Object.entries(recipeToDisplay);
 
-      console.log(entries);
-
       let ingredientsArr = [];
       let measurementsArr = [];
       let instructionsArr = [];
@@ -76,7 +74,7 @@ function RecipeModal({ setRecipeInfo }) {
     }
   }
 
-  console.log(instructions);
+  console.log(recipeToDisplay.strYouTube);
 
   return (
     <>
@@ -98,7 +96,7 @@ function RecipeModal({ setRecipeInfo }) {
           />
         </div>
         <div className="h-full w-full relative overflow-y-auto flex">
-          <div className="h-full w-2/6 overflow-y-auto flex flex-col items-center pb-6">
+          <div className="h-full w-2/6 overflow-y-auto flex flex-col items-center pb-6 bg-gray-50">
             <h1 className="text-xl font-bold my-2">Ingredients</h1>
             {ingAndMeas &&
               ingAndMeas.map((elem, i) => {
@@ -111,7 +109,9 @@ function RecipeModal({ setRecipeInfo }) {
               })}
           </div>
           <div className="h-full w-4/6 overflow-y-auto flex flex-col items-center pb-6">
-            <h1 className="text-xl font-bold my-2">Ingredients</h1>
+            <h1 className="text-xl font-bold my-2 w-80 text-center">
+              {recipeToDisplay.strMeal}
+            </h1>
             {instructions &&
               instructions.map((elem, i) => {
                 return (
@@ -121,12 +121,19 @@ function RecipeModal({ setRecipeInfo }) {
                   </div>
                 );
               })}
+            {recipeToDisplay.strYoutube && (
+              <div className="flex flex-col items-center mt-4 border-t-2 pt-4">
+                <p className="text-lg font-bold">
+                  Need a Youtube video to help you out?
+                </p>
+                <a href={`${recipeToDisplay.strYoutube}`}>Click here</a>
+              </div>
+            )}
           </div>
-          <div className="absolute h-5/6 w-1 bg-detail top-[1.9rem] left-[12.4rem]"></div>
         </div>
       </div>
       <div
-        className="w-full h-full bg-black opacity-40 absolute"
+        className="w-full h-full bg-black opacity-50 absolute"
         onClick={handleExit}
       ></div>
     </>

@@ -10,6 +10,9 @@ module.exports = {
         primary: "#102E4A",
         detail: "#A682FF",
       },
+      screens: {
+        lg: "1080px",
+      },
     },
   },
   plugins: [],
