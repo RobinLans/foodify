@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { recipeInfoCtx } from "../Context";
+import LoginModal from "./LoginModal";
 import { FaUtensils } from "react-icons/fa";
 import { BiUserCircle } from "react-icons/bi";
 
 function Navbar() {
   const navigate = useNavigate();
+  const { showLoginModal, setShowLoginModal } = useContext(recipeInfoCtx);
 
   function goHome() {
     navigate("/");
+  }
+
+  function handleUserBtnClick() {
+    setShowLoginModal(!showLoginModal);
   }
 
   return (
@@ -25,9 +32,12 @@ function Navbar() {
         </Link>
       </div>
       <div className="navContainers justify-end">
-        <button>
-          <BiUserCircle className="text-primary h-14 w-14" />
-        </button>
+        <div className="relative">
+          <button onClick={handleUserBtnClick}>
+            <BiUserCircle className="text-primary h-14 w-14" />
+          </button>
+          {showLoginModal && <LoginModal />}
+        </div>
       </div>
     </div>
   );
